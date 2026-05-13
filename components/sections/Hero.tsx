@@ -15,12 +15,14 @@ const heroHighlights = [
   {
     text: "Estratégia personalizada para cada caso",
     lines: ["Estratégia", "personalizada para", "cada caso"],
+    mobileLines: ["Estratégia personalizada", "para cada caso"],
     icon: ASSETS.icons.customStrategy,
     iconClass: "h-14 w-14 lg:h-[58px] lg:w-[58px]",
   },
   {
     text: "Acompanhamento próximo e transparente",
     lines: ["Acompanhamento", "próximo e", "transparente"],
+    mobileLines: ["Acompanhamento próximo", "e transparente"],
     icon: ASSETS.icons.closeFollowUp,
     iconClass: "h-14 w-14 lg:h-[58px] lg:w-[58px]",
   },
@@ -166,11 +168,24 @@ export function Hero() {
                   style={{ filter: goldIconFilter }}
                 />
                 <span className="block min-w-0 max-w-[280px] flex-1 md:max-w-[230px] lg:max-w-[250px]">
-                  {item.lines.map((line) => (
-                    <span key={line} className="block whitespace-nowrap">
-                      {line}
+                  {item.mobileLines ? (
+                    <span className="block md:hidden">
+                      {item.mobileLines.map((line) => (
+                        <span key={line} className="block whitespace-nowrap">
+                          {line}
+                        </span>
+                      ))}
                     </span>
-                  ))}
+                  ) : null}
+                  <span
+                    className={item.mobileLines ? "hidden md:block" : "block"}
+                  >
+                    {item.lines.map((line) => (
+                      <span key={line} className="block whitespace-nowrap">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
                 </span>
               </p>
             </div>
