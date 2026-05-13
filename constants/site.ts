@@ -49,8 +49,8 @@ export const ASSETS = {
 };
 
 export const NAV_ITEMS = [
-  { label: "Atuação", href: "#atuacao" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Atuação", href: "#atuacao" },
   { label: "Avaliações", href: "#avaliacoes" },
   { label: "Dúvidas", href: "#duvidas" },
 ];
