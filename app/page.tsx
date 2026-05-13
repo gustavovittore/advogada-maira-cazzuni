@@ -12,7 +12,7 @@ import { UrgentSituations } from "@/components/sections/UrgentSituations";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white pt-[81px] md:pt-[105px]">
       <Header />
       <Hero />
       <UrgentSituations />

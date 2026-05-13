@@ -4,7 +4,7 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#D1AF66]/18 bg-[#4A0001]/96 backdrop-blur-xl transition-[background-color,backdrop-filter,border-color] duration-300 ease-out">
+    <header className="fixed left-0 top-0 z-[999] w-full border-b border-[#D1AF66]/18 bg-[#4A0001]/96 backdrop-blur-xl transition-[background-color,backdrop-filter,border-color] duration-300 ease-out">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8 md:py-5">
         <a
           href="#topo"
