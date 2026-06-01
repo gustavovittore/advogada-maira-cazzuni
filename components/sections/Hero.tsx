@@ -2,6 +2,9 @@ import Image from "next/image";
 import { ASSETS } from "@/constants/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
+const heroBackground = "/brand/2/background-hero.png.png";
+const heroPhoto = "/brand/2/foto-mayra-hero-3.png.png";
+
 const goldIconFilter =
   "brightness(0) saturate(100%) invert(76%) sepia(24%) saturate(822%) hue-rotate(3deg) brightness(89%) contrast(86%)";
 
@@ -49,23 +52,26 @@ export function Hero() {
   return (
     <section
       id="topo"
-      className="relative isolate overflow-hidden bg-[#160000] text-white"
+      className="relative isolate overflow-hidden bg-[#130000] text-white"
+      style={{
+        backgroundImage: `linear-gradient(90deg, rgba(18,0,0,0.96) 0%, rgba(42,2,2,0.86) 36%, rgba(44,3,3,0.44) 62%, rgba(10,0,0,0.1) 100%), url('${heroBackground}')`,
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+      }}
     >
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_73%_28%,rgba(107,17,14,0.52),transparent_31%),radial-gradient(circle_at_18%_30%,rgba(98,9,8,0.48),transparent_35%),linear-gradient(135deg,#050000_0%,#1A0000_31%,#2B0202_58%,#070000_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.34),transparent_44%,rgba(0,0,0,0.22)),linear-gradient(180deg,rgba(0,0,0,0.24),transparent_42%,rgba(0,0,0,0.3))]" />
-      <div className="absolute inset-0 -z-10 opacity-[0.1] [background-image:linear-gradient(90deg,rgba(209,175,102,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(209,175,102,0.08)_1px,transparent_1px)] [background-size:92px_92px]" />
-      <div className="absolute right-0 top-20 -z-10 hidden h-[74%] w-[30%] border-l border-[#D1AF66]/16 bg-[linear-gradient(90deg,transparent,rgba(209,175,102,0.045))] lg:block" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.16)_0%,transparent_45%,rgba(15,0,0,0.26)_78%,rgba(15,0,0,0.52)_100%)]" />
+      <div className="absolute inset-y-0 left-0 -z-10 w-[62%] bg-[radial-gradient(circle_at_24%_35%,rgba(105,8,8,0.54),transparent_38%)]" />
 
-      <div className="mx-auto grid max-w-[1500px] gap-12 px-5 pb-10 pt-12 md:px-8 md:pb-16 md:pt-20 lg:min-h-[760px] lg:grid-cols-[1.12fr_0.88fr] lg:items-center lg:gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:px-12">
-        <div className="relative z-20 max-w-[760px]">
+      <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pb-8 pt-12 sm:px-8 md:pb-10 md:pt-16 lg:min-h-[700px] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-0 lg:px-14 lg:pt-20">
+        <div className="relative z-20 max-w-[700px] lg:pt-6">
           <div className="mb-8 flex items-center gap-5 md:mb-9">
-            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#D1AF66]">
+            <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-[#D1AF66] md:text-xs">
               Advocacia criminal em Erechim/RS
             </p>
-            <span className="hidden h-px w-32 bg-[#D1AF66]/55 sm:block" />
+            <span className="hidden h-px w-32 bg-[#D1AF66]/80 sm:block" />
           </div>
 
-          <h1 className="max-w-[360px] font-serif text-[2.55rem] leading-[0.98] tracking-normal text-white sm:max-w-[650px] sm:text-[4.45rem] sm:leading-[0.94] md:max-w-[720px] md:text-[5rem] lg:text-[4.25rem] xl:text-[5.25rem] 2xl:text-[5.65rem]">
+          <h1 className="max-w-[360px] font-serif text-[2.65rem] leading-[0.98] tracking-normal text-white sm:max-w-[650px] sm:text-[4.6rem] sm:leading-[0.94] md:text-[5.1rem] lg:max-w-[720px] lg:text-[4.95rem] xl:text-[5.35rem] 2xl:text-[5.75rem]">
             <span className="block whitespace-nowrap">Defesa criminal</span>
             <span className="block whitespace-nowrap">estratégica para</span>
             <span className="block whitespace-nowrap">quem precisa agir</span>
@@ -75,12 +81,12 @@ export function Hero() {
           </h1>
 
           <div className="my-8 flex items-center gap-4 md:my-9">
-            <span className="h-px w-24 bg-[#D1AF66]" />
+            <span className="h-px w-24 bg-[#D1AF66]/80" />
             <span className="h-2 w-2 rotate-45 border border-[#D1AF66]" />
-            <span className="h-px w-24 bg-[#D1AF66]" />
+            <span className="h-px w-24 bg-[#D1AF66]/80" />
           </div>
 
-          <p className="max-w-[360px] text-[17px] leading-8 text-white/84 sm:max-w-[620px] md:text-xl md:leading-9">
+          <p className="max-w-[360px] text-[17px] leading-8 text-white/86 sm:max-w-[620px] md:text-[19px] md:leading-9">
             Atuação em Tribunal do Júri, Execução Penal, prisões em flagrante e
             ações criminais, com{" "}
             <strong className="font-semibold text-[#D1AF66]">
@@ -89,13 +95,13 @@ export function Hero() {
             em momentos decisivos.
           </p>
 
-          <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <WhatsAppButton className="w-full max-w-[350px] sm:w-auto" />
-            <div className="grid max-w-[350px] grid-cols-2 gap-4 text-[11px] font-bold uppercase leading-5 tracking-[0.08em] text-white/82 sm:max-w-none sm:text-xs sm:tracking-[0.12em]">
+          <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <WhatsAppButton className="!w-full !max-w-[350px] px-7 py-4 sm:!w-auto" />
+            <div className="grid max-w-[360px] grid-cols-2 gap-0 text-[11px] font-bold uppercase leading-5 tracking-[0.1em] text-white/84 sm:max-w-[430px] sm:text-xs">
               {trustPills.map((item) => (
                 <span
                   key={item.text}
-                  className="flex min-h-14 min-w-0 items-center gap-3 border-l border-[#D1AF66]/45 pl-4"
+                  className="flex min-h-14 min-w-0 items-center gap-3 border-l border-[#D1AF66]/42 px-4 sm:px-5"
                 >
                   <Image
                     src={item.icon}
@@ -112,51 +118,32 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[350px] pt-4 sm:max-w-[560px] md:pt-0 lg:max-w-[590px] xl:max-w-[640px]">
-          <div className="absolute left-1/2 top-0 h-[88%] w-[84%] -translate-x-1/2 rounded-t-[999px] border border-[#D1AF66]/70" />
-          <div className="absolute left-[53%] top-7 h-[82%] w-[82%] -translate-x-1/2 rounded-t-[999px] border border-[#D1AF66]/30" />
-          <div className="relative z-10 mx-auto w-[88%] overflow-hidden rounded-t-[999px] border border-[#D1AF66]/22 bg-[#120000] shadow-[0_34px_120px_rgba(0,0,0,0.58)]">
-            <Image
-              src={ASSETS.heroPhoto}
-              alt="Maíra Cazzuni, advogada criminalista"
-              width={1080}
-              height={1402}
-              priority
-              sizes="(max-width: 768px) 88vw, 590px"
-              className="aspect-[4/5] w-full object-cover object-[50%_16%] opacity-95 mix-blend-lighten"
-            />
-            <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#120000] via-[#220001]/72 to-transparent" />
-          </div>
+        <div className="relative z-10 mx-auto min-h-[440px] w-full max-w-[430px] overflow-visible sm:min-h-[560px] sm:max-w-[560px] lg:-mt-16 lg:min-h-[764px] lg:max-w-none">
+          <Image
+            src={heroPhoto}
+            alt="Maíra Cazzuni, advogada criminalista"
+            width={1380}
+            height={2530}
+            priority
+            unoptimized
+            quality={100}
+            sizes="(max-width: 768px) 420px, (max-width: 1200px) 52vw, 710px"
+            className="absolute left-1/2 top-10 z-10 h-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.42)] sm:top-8 lg:left-auto lg:right-0 lg:top-[-20px] lg:translate-x-0 xl:right-6"
+            style={{
+              width: "clamp(400px, 46vw, 620px)",
+            }}
+          />
+          <div className="absolute bottom-0 left-1/2 z-0 h-[62%] w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.5),transparent_66%)] lg:left-auto lg:right-[54px] lg:w-[70%] lg:translate-x-0 xl:right-[86px]" />
 
-          <div className="absolute bottom-7 right-0 z-20 w-[370px] max-w-[min(370px,calc(100%-24px))] border border-[#D1AF66]/70 bg-[#210001]/82 px-6 py-5 shadow-[0_22px_60px_rgba(0,0,0,0.34)] backdrop-blur-md max-md:left-6 max-md:right-6 max-md:bottom-2 max-md:w-auto max-md:max-w-none max-md:px-5">
-            <div className="flex items-center gap-5">
-              <Image
-                src={ASSETS.icons.strategyEthics}
-                alt=""
-                width={56}
-                height={56}
-                className="h-14 w-14 shrink-0 object-contain opacity-90"
-                style={{ filter: goldIconFilter }}
-              />
-              <p className="min-w-0 text-[12px] font-bold uppercase leading-6 tracking-[0.08em] sm:text-[13px] sm:tracking-[0.1em]">
-                <span className="block whitespace-nowrap text-white">
-                  Atuação com estratégia
-                </span>
-                <span className="block whitespace-nowrap text-[#D1AF66]">
-                  ética e responsabilidade
-                </span>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div className="border-y border-[#D1AF66]/16 bg-[#2B0202]/70 backdrop-blur">
-        <div className="mx-auto grid max-w-7xl gap-0 px-5 py-7 md:grid-cols-4 md:px-8">
+      <div className="relative z-30 border-y border-[#D1AF66]/16 bg-[#2A0202]/86 backdrop-blur">
+        <div className="mx-auto grid max-w-[1440px] gap-0 px-5 py-7 md:grid-cols-4 md:px-8 lg:px-14">
           {heroHighlights.map((item) => (
             <div
               key={item.text}
-              className="min-w-0 border-[#D1AF66]/20 py-4 md:border-l md:px-4 md:first:border-l-0 lg:px-5 xl:px-6"
+              className="min-w-0 border-[#D1AF66]/20 py-4 md:border-l md:px-4 md:first:border-l-0 lg:px-7 xl:px-8"
             >
               <p className="flex min-h-16 min-w-0 items-center gap-5 text-xs font-bold uppercase leading-6 tracking-[0.09em] text-white/90 sm:text-[13px] sm:tracking-[0.1em] lg:text-[13px] lg:tracking-[0.1em]">
                 <Image

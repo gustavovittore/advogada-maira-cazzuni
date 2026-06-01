@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { ASSETS, NAV_ITEMS, WHATSAPP_URL } from "@/constants/site";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export function Header() {
   return (
-    <header className="fixed left-0 top-0 z-[999] w-full border-b border-[#D1AF66]/18 bg-[#4A0001]/96 backdrop-blur-xl transition-[background-color,backdrop-filter,border-color] duration-300 ease-out">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8 md:py-5">
+    <header className="fixed left-0 top-0 z-[999] w-full border-b border-[#D1AF66]/16 bg-[#2E0001]/96 backdrop-blur-xl transition-[background-color,backdrop-filter,border-color] duration-300 ease-out">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-4 px-5 py-4 md:px-14 md:py-5">
         <a
           href="#topo"
           className="flex h-12 w-[132px] shrink-0 items-center sm:w-[190px] md:h-16 md:w-[252px]"
@@ -21,7 +20,7 @@ export function Header() {
           />
         </a>
 
-        <nav className="hidden items-center gap-10 text-xs font-bold uppercase tracking-[0.22em] text-white/78 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-12 text-xs font-bold uppercase tracking-[0.24em] text-white/78 lg:flex">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
@@ -33,9 +32,22 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <WhatsAppButton />
-        </div>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden min-h-14 shrink-0 items-center justify-center gap-4 rounded-[3px] bg-[#D1AF66] px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#160F0A] shadow-[0_20px_42px_rgba(209,175,102,0.22)] transition duration-300 hover:bg-[#e0c277] md:inline-flex"
+        >
+          <Image
+            src={ASSETS.whatsapp}
+            alt=""
+            width={20}
+            height={20}
+            className="h-5 w-5 object-contain"
+          />
+          <span>Falar com a advogada agora</span>
+        </a>
+
         <a
           href={WHATSAPP_URL}
           target="_blank"

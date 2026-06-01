@@ -1,37 +1,60 @@
+import Image from "next/image";
+import { ASSETS } from "@/constants/site";
 import { urgentSituations } from "@/data/content";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export function UrgentSituations() {
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="mx-auto w-full max-w-7xl px-5 md:px-8">
-        <div className="grid min-w-0 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
-            <SectionHeader
-              eyebrow="Situações urgentes"
-              title="Você pode precisar de orientação criminal se..."
-              description="Nem sempre a pessoa sabe se o que está vivendo já exige apoio jurídico. Em situações de medo, dúvida ou urgência, uma conversa inicial pode trazer direção e reduzir a sensação de estar sozinha."
-            />
-            <div className="mt-8">
-              <WhatsAppButton />
+    <section className="bg-[#fffdfb] py-16 md:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[1440px] px-5 md:px-10 lg:px-16">
+        <div className="grid min-w-0 gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-16">
+          <div className="max-w-[540px]">
+            <p className="text-[12px] font-bold uppercase tracking-[0.34em] text-[#360A0B]">
+              Situações urgentes
+            </p>
+            <h2 className="mt-8 max-w-[530px] font-serif text-[2.95rem] leading-[1.1] tracking-normal text-[#360A0B] sm:text-[3.8rem] lg:text-[4.1rem]">
+              Você pode precisar de orientação criminal{" "}
+              <span className="italic text-[#B38B35]">se...</span>
+            </h2>
+            <div className="my-8 flex items-center gap-0 text-[#D1AF66]">
+              <span className="h-px w-28 bg-current" />
+              <span className="h-3 w-3 rotate-45 border border-current" />
+              <span className="h-px w-28 bg-current" />
+            </div>
+            <p className="max-w-[520px] text-[19px] leading-[2.05] text-[#3d3431] md:text-[21px]">
+              Nem sempre a pessoa sabe se o que está vivendo já precisa de apoio
+              jurídico. Em situações de medo, dúvida ou urgência, uma conversa
+              inicial pode trazer direção e reduzir a sensação de estar sozinha.
+            </p>
+            <div className="mt-10">
+              <WhatsAppButton className="min-h-[64px] min-w-[360px] max-sm:w-full max-sm:min-w-0" />
             </div>
           </div>
-          <div className="grid min-w-0 gap-4 sm:grid-cols-2">
-            {urgentSituations.map((situation) => (
+
+          <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+            {urgentSituations.map((situation, index) => (
               <article
                 key={situation.title}
-                className="group relative min-w-0 overflow-hidden border border-[#e5d8c0] bg-[#fbf8f3] p-6 shadow-[0_18px_46px_rgba(74,0,1,0.045)] transition duration-300 hover:-translate-y-1 hover:border-[#D1AF66] hover:bg-white md:p-7"
+                className="min-w-0 border border-[#D1AF66]/45 bg-[#fffaf4] px-7 py-8 text-left shadow-[0_22px_70px_rgba(73,23,14,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#D1AF66] hover:bg-white md:min-h-[315px] md:px-8 md:py-9"
               >
-                <span className="absolute right-0 top-0 h-full w-1 bg-[#D1AF66]/0 transition group-hover:bg-[#D1AF66]" />
-                <span className="mb-5 flex items-center gap-3">
-                  <span className="h-px w-12 bg-[#D1AF66]" />
-                  <span className="h-1.5 w-1.5 rotate-45 bg-[#D1AF66]" />
+                <span className="mb-6 flex items-center justify-start text-[#D1AF66]">
+                  <span className="h-px w-20 bg-current" />
+                  <span className="h-3 w-3 rotate-45 border border-current" />
+                  <span className="h-px w-20 bg-current" />
                 </span>
-                <h3 className="font-serif text-2xl leading-tight text-[#1C1917] md:text-[1.72rem]">
+                <span className="mb-6 block h-[54px] w-[54px]">
+                  <Image
+                    src={ASSETS.urgentIcons[index]}
+                    alt=""
+                    width={54}
+                    height={54}
+                    className="h-[54px] w-[54px] object-contain"
+                  />
+                </span>
+                <h3 className="max-w-[310px] font-serif text-[1.5rem] leading-tight text-[#360A0B] md:text-[1.78rem]">
                   {situation.title}
                 </h3>
-                <p className="mt-4 max-w-full break-words text-[17px] leading-8 text-[#5f5650] md:text-lg">
+                <p className="mt-5 max-w-full break-words text-[18px] leading-8 text-[#5d5652] md:text-[19px] md:leading-9">
                   {situation.description}
                 </p>
               </article>
