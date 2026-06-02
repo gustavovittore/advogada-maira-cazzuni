@@ -13,8 +13,15 @@ export function UrgentSituations() {
               Situações urgentes
             </p>
             <h2 className="mt-8 max-w-[390px] font-serif text-[2.42rem] leading-[1.08] tracking-normal text-[#360A0B] sm:max-w-[530px] sm:text-[3.8rem] sm:leading-[1.1] lg:text-[4.1rem]">
-              Você pode precisar de orientação criminal{" "}
-              <span className="italic text-[#B38B35]">se...</span>
+              <span className="block sm:hidden">Você pode precisar</span>
+              <span className="block sm:hidden">de orientação criminal</span>
+              <span className="block italic text-[#B38B35] sm:hidden">
+                se...
+              </span>
+              <span className="hidden sm:inline">
+                Você pode precisar de orientação criminal{" "}
+                <span className="italic text-[#B38B35]">se...</span>
+              </span>
             </h2>
             <div className="my-8 flex items-center gap-0 text-[#D1AF66]">
               <span className="h-px w-28 bg-current" />

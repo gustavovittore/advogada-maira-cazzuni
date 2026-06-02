@@ -4,20 +4,28 @@ export function Process() {
   return (
     <section className="bg-[#fffdfb] py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
-        <div className="mx-auto max-w-[980px] text-center">
-          <p className="text-[13px] font-bold uppercase tracking-[0.34em] text-[#4A0001]">
+        <div className="mx-auto max-w-[980px] text-left md:text-center">
+          <p className="hidden text-[13px] font-bold uppercase tracking-[0.34em] text-[#4A0001] md:block">
             Como funciona
           </p>
-          <div className="mx-auto mt-5 flex max-w-[315px] items-center justify-center text-[#D1AF66]">
+          <div className="flex max-w-[315px] items-center justify-start text-[#D1AF66] md:hidden">
             <span className="h-px flex-1 bg-current" />
             <span className="mx-3 h-4 w-4 rotate-45 border border-current" />
             <span className="h-px flex-1 bg-current" />
           </div>
-          <h2 className="mx-auto mt-6 max-w-[370px] font-serif text-[2.42rem] leading-[1.08] text-[#3B090A] sm:max-w-none sm:text-[3.95rem] sm:leading-[1.07] lg:text-[4.55rem]">
+          <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.34em] text-[#4A0001] md:hidden">
+            Como funciona
+          </p>
+          <div className="mx-auto mt-5 hidden max-w-[315px] items-center justify-center text-[#D1AF66] md:flex">
+            <span className="h-px flex-1 bg-current" />
+            <span className="mx-3 h-4 w-4 rotate-45 border border-current" />
+            <span className="h-px flex-1 bg-current" />
+          </div>
+          <h2 className="mt-6 max-w-[370px] font-serif text-[2.42rem] leading-[1.08] text-[#3B090A] sm:max-w-none sm:text-[3.95rem] sm:leading-[1.07] md:mx-auto lg:text-[4.55rem]">
             Um caminho claro desde o primeiro contato.
           </h2>
-          <div className="mx-auto my-7 h-3 w-20 border-b border-[#D1AF66]" />
-          <p className="mx-auto max-w-[860px] text-[20px] leading-9 text-[#39424A] md:text-[23px]">
+          <div className="my-7 h-3 w-20 border-b border-[#D1AF66] md:mx-auto" />
+          <p className="max-w-[860px] text-[20px] leading-9 text-[#39424A] md:mx-auto md:text-[23px]">
             O atendimento organiza a situação com sigilo, escuta e orientação
             técnica, sempre sem prometer resultado.
           </p>
