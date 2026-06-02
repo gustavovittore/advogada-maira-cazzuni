@@ -71,7 +71,7 @@ export function Hero() {
             <span className="hidden h-px w-32 bg-[#D1AF66]/80 sm:block" />
           </div>
 
-          <h1 className="max-w-[360px] font-serif text-[2.65rem] leading-[0.98] tracking-normal text-white sm:max-w-[650px] sm:text-[4.6rem] sm:leading-[0.94] md:text-[5.1rem] lg:max-w-[720px] lg:text-[4.95rem] xl:text-[5.35rem] 2xl:text-[5.75rem]">
+          <h1 className="max-w-[360px] font-serif text-[2.45rem] leading-[0.98] tracking-normal text-white sm:max-w-[650px] sm:text-[4.6rem] sm:leading-[0.94] md:text-[5.1rem] lg:max-w-[720px] lg:text-[4.95rem] xl:text-[5.35rem] 2xl:text-[5.75rem]">
             <span className="block whitespace-nowrap">Defesa criminal</span>
             <span className="block whitespace-nowrap">estratégica para</span>
             <span className="block whitespace-nowrap">quem precisa agir</span>

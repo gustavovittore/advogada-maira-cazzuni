@@ -13,7 +13,7 @@ export function Process() {
             <span className="mx-3 h-4 w-4 rotate-45 border border-current" />
             <span className="h-px flex-1 bg-current" />
           </div>
-          <h2 className="mt-6 font-serif text-[3.05rem] leading-[1.07] text-[#3B090A] sm:text-[3.95rem] lg:text-[4.55rem]">
+          <h2 className="mx-auto mt-6 max-w-[370px] font-serif text-[2.42rem] leading-[1.08] text-[#3B090A] sm:max-w-none sm:text-[3.95rem] sm:leading-[1.07] lg:text-[4.55rem]">
             Um caminho claro desde o primeiro contato.
           </h2>
           <div className="mx-auto my-7 h-3 w-20 border-b border-[#D1AF66]" />

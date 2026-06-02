@@ -2,6 +2,36 @@ import Image from "next/image";
 import { ASSETS, CONTACT } from "@/constants/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
+function AboutPortrait({ className = "" }: { className?: string }) {
+  return (
+    <div className={`relative mx-auto w-full max-w-[680px] ${className}`}>
+      <div className="absolute -right-4 -top-7 h-[calc(100%+56px)] w-[calc(100%-20px)] border border-[#D1AF66]/78 md:-right-7" />
+      <div className="absolute -right-9 -top-2 h-[calc(100%+28px)] w-[calc(100%-12px)] border border-[#D1AF66]/50 md:-right-12" />
+      <div className="absolute -left-3 -top-4 h-12 w-12 border-l border-t border-[#D1AF66] md:-left-6" />
+      <div className="absolute -bottom-4 -right-3 h-12 w-12 border-b border-r border-[#D1AF66] md:-right-6" />
+
+      <div className="relative aspect-[1/1.14] overflow-hidden border border-[#D1AF66]/72 bg-[#160000] shadow-[0_34px_110px_rgba(0,0,0,0.42)]">
+        <Image
+          src={ASSETS.aboutBackground}
+          alt=""
+          fill
+          sizes="(max-width: 1024px) 92vw, 660px"
+          className="object-cover object-center opacity-82"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.06),rgba(0,0,0,0.42))]" />
+        <Image
+          src={ASSETS.aboutPhoto}
+          alt="Retrato profissional de Maíra Cazzuni"
+          width={796}
+          height={1356}
+          sizes="(max-width: 1024px) 80vw, 560px"
+          className="absolute bottom-[-24%] left-1/2 h-[125%] w-auto max-w-none -translate-x-[39%] object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.42)]"
+        />
+      </div>
+    </div>
+  );
+}
+
 export function About() {
   return (
     <section
@@ -21,7 +51,7 @@ export function About() {
             <span className="hidden h-3 w-3 rotate-45 border border-[#D1AF66] sm:block" />
           </div>
 
-          <h2 className="max-w-[620px] font-serif text-[2.75rem] leading-[1.12] text-white sm:text-[3.35rem] lg:text-[3.72rem]">
+          <h2 className="max-w-[380px] font-serif text-[2.34rem] leading-[1.08] text-white sm:max-w-[620px] sm:text-[3.35rem] sm:leading-[1.12] lg:text-[3.72rem]">
             Defesa criminal com técnica, firmeza e orientação{" "}
             <span className="text-[#D1AF66]">humana.</span>
           </h2>
@@ -30,6 +60,8 @@ export function About() {
             <span className="h-px w-24 bg-current" />
             <span className="h-3 w-3 rotate-45 border border-current" />
           </div>
+
+          <AboutPortrait className="mb-9 mt-10 max-w-[520px] md:hidden" />
 
           <div className="space-y-6 text-[19px] leading-[2.04] text-white/82 md:text-[21px]">
             <p>
@@ -74,31 +106,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[680px]">
-          <div className="absolute -right-4 -top-7 h-[calc(100%+56px)] w-[calc(100%-20px)] border border-[#D1AF66]/78 md:-right-7" />
-          <div className="absolute -right-9 -top-2 h-[calc(100%+28px)] w-[calc(100%-12px)] border border-[#D1AF66]/50 md:-right-12" />
-          <div className="absolute -left-3 -top-4 h-12 w-12 border-l border-t border-[#D1AF66] md:-left-6" />
-          <div className="absolute -bottom-4 -right-3 h-12 w-12 border-b border-r border-[#D1AF66] md:-right-6" />
-
-          <div className="relative aspect-[1/1.14] overflow-hidden border border-[#D1AF66]/72 bg-[#160000] shadow-[0_34px_110px_rgba(0,0,0,0.42)]">
-            <Image
-              src={ASSETS.aboutBackground}
-              alt=""
-              fill
-              sizes="(max-width: 1024px) 92vw, 660px"
-              className="object-cover object-center opacity-82"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.06),rgba(0,0,0,0.42))]" />
-            <Image
-              src={ASSETS.aboutPhoto}
-              alt="Retrato profissional de Maíra Cazzuni"
-              width={796}
-              height={1356}
-              sizes="(max-width: 1024px) 80vw, 560px"
-              className="absolute bottom-[-24%] left-1/2 h-[125%] w-auto max-w-none -translate-x-[39%] object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.42)]"
-            />
-          </div>
-        </div>
+        <AboutPortrait className="hidden md:block" />
       </div>
     </section>
   );

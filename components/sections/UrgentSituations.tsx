@@ -12,7 +12,7 @@ export function UrgentSituations() {
             <p className="text-[12px] font-bold uppercase tracking-[0.34em] text-[#360A0B]">
               Situações urgentes
             </p>
-            <h2 className="mt-8 max-w-[530px] font-serif text-[2.95rem] leading-[1.1] tracking-normal text-[#360A0B] sm:text-[3.8rem] lg:text-[4.1rem]">
+            <h2 className="mt-8 max-w-[390px] font-serif text-[2.42rem] leading-[1.08] tracking-normal text-[#360A0B] sm:max-w-[530px] sm:text-[3.8rem] sm:leading-[1.1] lg:text-[4.1rem]">
               Você pode precisar de orientação criminal{" "}
               <span className="italic text-[#B38B35]">se...</span>
             </h2>

@@ -16,9 +16,16 @@ export function FinalCta() {
             </p>
             <span className="hidden h-px w-24 bg-[#D1AF66]/70 sm:block" />
           </div>
-          <h2 className="max-w-[760px] font-serif text-[1.95rem] leading-[1.1] text-white sm:text-[3.15rem] lg:text-[3.55rem]">
-            <span className="block">Precisa de orientação</span>
-            <span className="block whitespace-nowrap">
+          <h2 className="max-w-[365px] font-serif text-[2.08rem] leading-[1.08] text-white sm:max-w-[760px] sm:text-[3.15rem] sm:leading-[1.1] lg:text-[3.55rem]">
+            <span className="block sm:hidden">Precisa de orientação</span>
+            <span className="block sm:hidden">
+              criminal <span className="italic text-[#D1AF66]">com</span>
+            </span>
+            <span className="block italic text-[#D1AF66] sm:hidden">
+              segurança?
+            </span>
+            <span className="hidden sm:block">Precisa de orientação</span>
+            <span className="hidden whitespace-nowrap sm:block">
               criminal <span className="italic text-[#D1AF66]">com segurança?</span>
             </span>
           </h2>

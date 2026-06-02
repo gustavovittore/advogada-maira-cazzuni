@@ -59,7 +59,7 @@ export function GoogleReviews() {
               <span className="hidden h-px w-28 bg-[#D1AF66]/70 sm:block" />
               <span className="hidden h-3 w-3 rotate-45 bg-[#D1AF66] sm:block" />
             </div>
-            <h2 className="max-w-[760px] font-serif text-[3rem] leading-[1.08] text-white sm:text-[3.95rem] lg:text-[4.45rem]">
+            <h2 className="max-w-[370px] font-serif text-[2.36rem] leading-[1.08] text-white sm:max-w-[760px] sm:text-[3.95rem] lg:text-[4.45rem]">
               Mais de <span className="text-[#D1AF66]">100</span> avaliações 5
               estrelas no Google
             </h2>

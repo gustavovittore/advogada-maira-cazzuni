@@ -21,7 +21,7 @@ export function Differentials() {
             Diferenciais
           </p>
           <span className="mt-6 block h-px w-28 bg-[#D1AF66]" />
-          <h2 className="mt-8 max-w-[520px] font-serif text-[3rem] leading-[1.1] text-white sm:text-[3.75rem] lg:text-[4.15rem]">
+          <h2 className="mt-8 max-w-[370px] font-serif text-[2.42rem] leading-[1.08] text-white sm:max-w-[520px] sm:text-[3.75rem] sm:leading-[1.1] lg:text-[4.15rem]">
             Presença firme para momentos que exigem cuidado.
           </h2>
           <div className="my-9 flex items-center gap-0 text-[#D1AF66]">
