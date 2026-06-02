@@ -51,11 +51,18 @@ export function About() {
             <span className="hidden h-3 w-3 rotate-45 border border-[#D1AF66] sm:block" />
           </div>
 
-          <h2 className="max-w-[385px] font-serif text-[2.34rem] leading-[1.08] text-white sm:max-w-[620px] sm:text-[3.35rem] sm:leading-[1.12] lg:text-[3.72rem]">
-            <span className="block sm:hidden">Defesa criminal</span>
-            <span className="block sm:hidden">com técnica, firmeza</span>
-            <span className="block sm:hidden">
-              e orientação <span className="text-[#D1AF66]">humana.</span>
+          <h2 className="max-w-[360px] font-serif text-[2.08rem] leading-[1.06] text-white sm:max-w-[620px] sm:text-[3.35rem] sm:leading-[1.12] lg:text-[3.72rem]">
+            <span className="block whitespace-nowrap sm:hidden">
+              Defesa criminal
+            </span>
+            <span className="block whitespace-nowrap sm:hidden">
+              com técnica,
+            </span>
+            <span className="block whitespace-nowrap sm:hidden">
+              firmeza e orientação
+            </span>
+            <span className="block whitespace-nowrap text-[#D1AF66] sm:hidden">
+              humana.
             </span>
             <span className="hidden sm:inline">
               Defesa criminal com técnica, firmeza e orientação{" "}
