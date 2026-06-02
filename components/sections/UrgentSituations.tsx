@@ -17,10 +17,10 @@ export function UrgentSituations() {
                 Você pode precisar
               </span>
               <span className="block whitespace-nowrap sm:hidden">
-                de orientação criminal
+                de orientação
               </span>
               <span className="block whitespace-nowrap italic text-[#B38B35] sm:hidden">
-                se...
+                <span className="not-italic text-[#360A0B]">criminal </span>se...
               </span>
               <span className="hidden sm:inline">
                 Você pode precisar de orientação criminal{" "}
@@ -37,39 +37,45 @@ export function UrgentSituations() {
               jurídico. Em situações de medo, dúvida ou urgência, uma conversa
               inicial pode trazer direção e reduzir a sensação de estar sozinha.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 max-sm:hidden">
               <WhatsAppButton className="min-h-[64px] min-w-[360px] max-sm:w-full max-sm:min-w-0" />
             </div>
           </div>
 
-          <div className="grid min-w-0 gap-5 sm:grid-cols-2">
-            {urgentSituations.map((situation, index) => (
-              <article
-                key={situation.title}
-                className="min-w-0 border border-[#D1AF66]/45 bg-[#fffaf4] px-7 py-8 text-left shadow-[0_22px_70px_rgba(73,23,14,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#D1AF66] hover:bg-white md:min-h-[315px] md:px-8 md:py-9"
-              >
-                <span className="mb-6 flex items-center justify-start text-[#D1AF66]">
-                  <span className="h-px w-20 bg-current" />
-                  <span className="h-3 w-3 rotate-45 border border-current" />
-                  <span className="h-px w-20 bg-current" />
-                </span>
-                <span className="mb-6 block h-[54px] w-[54px]">
-                  <Image
-                    src={ASSETS.urgentIcons[index]}
-                    alt=""
-                    width={54}
-                    height={54}
-                    className="h-[54px] w-[54px] object-contain"
-                  />
-                </span>
-                <h3 className="max-w-[310px] font-serif text-[1.5rem] leading-tight text-[#360A0B] md:text-[1.78rem]">
-                  {situation.title}
-                </h3>
-                <p className="mt-5 max-w-full break-words text-[18px] leading-8 text-[#5d5652] md:text-[19px] md:leading-9">
-                  {situation.description}
-                </p>
-              </article>
-            ))}
+          <div>
+            <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+              {urgentSituations.map((situation, index) => (
+                <article
+                  key={situation.title}
+                  className="min-w-0 border border-[#D1AF66]/45 bg-[#fffaf4] px-7 py-8 text-left shadow-[0_22px_70px_rgba(73,23,14,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#D1AF66] hover:bg-white md:min-h-[315px] md:px-8 md:py-9"
+                >
+                  <span className="mb-6 flex items-center justify-start text-[#D1AF66]">
+                    <span className="h-px w-20 bg-current" />
+                    <span className="h-3 w-3 rotate-45 border border-current" />
+                    <span className="h-px w-20 bg-current" />
+                  </span>
+                  <span className="mb-6 block h-[54px] w-[54px]">
+                    <Image
+                      src={ASSETS.urgentIcons[index]}
+                      alt=""
+                      width={54}
+                      height={54}
+                      className="h-[54px] w-[54px] object-contain"
+                    />
+                  </span>
+                  <h3 className="max-w-[310px] font-serif text-[1.5rem] leading-tight text-[#360A0B] md:text-[1.78rem]">
+                    {situation.title}
+                  </h3>
+                  <p className="mt-5 max-w-full break-words text-[18px] leading-8 text-[#5d5652] md:text-[19px] md:leading-9">
+                    {situation.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 sm:hidden">
+              <WhatsAppButton className="min-h-[64px] w-full" />
+            </div>
           </div>
         </div>
       </div>
