@@ -12,21 +12,13 @@ function AboutPortrait({ className = "" }: { className?: string }) {
 
       <div className="relative aspect-[1/1.14] overflow-hidden border border-[#D1AF66]/72 bg-[#160000] shadow-[0_34px_110px_rgba(0,0,0,0.42)]">
         <Image
-          src={ASSETS.aboutBackground}
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 92vw, 660px"
-          className="object-cover object-center opacity-82"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.06),rgba(0,0,0,0.42))]" />
-        <Image
           src={ASSETS.aboutPhoto}
           alt="Retrato profissional de Maíra Cazzuni"
-          width={796}
-          height={1356}
-          sizes="(max-width: 1024px) 80vw, 560px"
-          className="absolute bottom-[-24%] left-1/2 h-[125%] w-auto max-w-none -translate-x-[39%] object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.42)]"
+          fill
+          sizes="(max-width: 1024px) 92vw, 660px"
+          className="object-cover object-top"
         />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.06),rgba(0,0,0,0.42))]" />
       </div>
     </div>
   );
