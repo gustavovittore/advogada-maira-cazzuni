@@ -63,7 +63,14 @@ export function Hero() {
       <div className="absolute inset-y-0 left-0 -z-10 w-[62%] bg-[radial-gradient(circle_at_24%_35%,rgba(105,8,8,0.54),transparent_38%)]" />
 
       <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pb-8 pt-6 sm:px-8 md:pb-10 md:pt-10 lg:min-h-[700px] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-0 lg:px-14 lg:pt-20">
-        <div className="relative z-10 mx-auto h-[560px] w-full max-w-[520px] overflow-hidden sm:h-[650px] lg:hidden">
+        <div
+          className="relative z-10 mx-[-1.25rem] h-[450px] w-[calc(100%+2.5rem)] max-w-none overflow-hidden sm:mx-[-2rem] sm:h-[580px] sm:w-[calc(100%+4rem)] lg:hidden"
+          style={{
+            backgroundImage: `url('${heroBackground}')`,
+            backgroundPosition: "86% center",
+            backgroundSize: "cover",
+          }}
+        >
           <Image
             src={heroPhoto}
             alt="MaÃ­ra Cazzuni, advogada criminalista"
@@ -73,12 +80,12 @@ export function Hero() {
             unoptimized
             quality={100}
             sizes="(max-width: 768px) 94vw, 520px"
-            className="absolute left-1/2 top-0 z-10 h-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.44)]"
+            className="absolute left-[36%] top-3 z-10 h-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.44)] sm:left-[38%] sm:top-4"
             style={{
-              width: "clamp(430px, 112vw, 560px)",
+              width: "clamp(315px, 82vw, 460px)",
             }}
           />
-          <div className="absolute bottom-0 left-1/2 z-0 h-[68%] w-[92%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.54),transparent_68%)]" />
+          <div className="absolute inset-x-0 bottom-0 z-0 h-px bg-[#D1AF66]/45" />
         </div>
 
         <div className="relative z-20 max-w-[700px] lg:pt-6">
