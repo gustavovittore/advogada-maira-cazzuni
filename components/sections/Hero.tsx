@@ -62,7 +62,25 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.16)_0%,transparent_45%,rgba(15,0,0,0.26)_78%,rgba(15,0,0,0.52)_100%)]" />
       <div className="absolute inset-y-0 left-0 -z-10 w-[62%] bg-[radial-gradient(circle_at_24%_35%,rgba(105,8,8,0.54),transparent_38%)]" />
 
-      <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pb-8 pt-12 sm:px-8 md:pb-10 md:pt-16 lg:min-h-[700px] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-0 lg:px-14 lg:pt-20">
+      <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pb-8 pt-6 sm:px-8 md:pb-10 md:pt-10 lg:min-h-[700px] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-0 lg:px-14 lg:pt-20">
+        <div className="relative z-10 mx-auto h-[560px] w-full max-w-[520px] overflow-hidden sm:h-[650px] lg:hidden">
+          <Image
+            src={heroPhoto}
+            alt="MaÃ­ra Cazzuni, advogada criminalista"
+            width={1380}
+            height={2530}
+            priority
+            unoptimized
+            quality={100}
+            sizes="(max-width: 768px) 94vw, 520px"
+            className="absolute left-1/2 top-0 z-10 h-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.44)]"
+            style={{
+              width: "clamp(430px, 112vw, 560px)",
+            }}
+          />
+          <div className="absolute bottom-0 left-1/2 z-0 h-[68%] w-[92%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.54),transparent_68%)]" />
+        </div>
+
         <div className="relative z-20 max-w-[700px] lg:pt-6">
           <div className="mb-8 flex items-center gap-5 md:mb-9">
             <p className="text-[11px] font-bold uppercase tracking-[0.36em] text-[#D1AF66] md:text-xs">
@@ -118,7 +136,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto min-h-[440px] w-full max-w-[430px] overflow-visible sm:min-h-[560px] sm:max-w-[560px] lg:-mt-16 lg:min-h-[764px] lg:max-w-none">
+        <div className="relative z-10 mx-auto hidden min-h-[440px] w-full max-w-[430px] overflow-visible sm:min-h-[560px] sm:max-w-[560px] lg:-mt-16 lg:block lg:min-h-[764px] lg:max-w-none">
           <Image
             src={heroPhoto}
             alt="Maíra Cazzuni, advogada criminalista"
