@@ -69,7 +69,7 @@ export function Hero() {
             backgroundImage: `url('${heroBackground}')`,
             backgroundPosition: "right center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            backgroundSize: "auto 125%",
           }}
         >
           <Image
