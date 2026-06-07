@@ -67,9 +67,9 @@ export function Hero() {
           className="relative z-10 mx-[-1.25rem] h-[450px] w-[calc(100%+2.5rem)] max-w-none overflow-hidden sm:mx-[-2rem] sm:h-[580px] sm:w-[calc(100%+4rem)] lg:hidden"
           style={{
             backgroundImage: `url('${heroBackground}')`,
-            backgroundPosition: "114% center",
+            backgroundPosition: "right center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "auto 112%",
+            backgroundSize: "cover",
           }}
         >
           <Image
